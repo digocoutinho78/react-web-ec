@@ -1,0 +1,26 @@
+
+Dependencias instaladas: 
+Axios
+npm install axios
+
+react-router-dom
+npm instal react-router-dom
+
+
+
+O eccomerce tratará da venda de 2 produtos. TVS e Celulares
+
+Os produtos terão os seguintes atributos:
+- Nome
+- Categoria
+- Preço
+- Descrição
+
+
+Pages:
+Home - com listagem geral dos produtos.
+Perfil - dados do usuário
+Login - entrada de login, sendo acionada no carrinho de compras ou em botão fixo de login
+Produto - Visão detalhada do produto, com foto.
+
+Banco de dados: Firebase?
