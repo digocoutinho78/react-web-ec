@@ -1,4 +1,5 @@
 import { useState } from "react";
+import React from "react";
 import "./App.css";
 import { Routes, Route, Link } from "react-router-dom";
 import { Cart } from "./pages/Cart";
@@ -6,9 +7,14 @@ import { TesteHome } from "./pages/Home";
 import { TesteLogin } from "./pages/Login";
 import { TestePerfil } from "./pages/Perfil";
 import { TesteProduto } from "./pages/Produto";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Button01 from "./components/Button01";
+import './components/components.css'
 
 function App() {
-  // const [count, setCount] = useState(0)
+ 
+
+
 
   return (
     <>
@@ -31,6 +37,8 @@ function App() {
           <li>
             <Link to="/cart">Carrinho</Link>
           </li>
+          
+         
         </ul>
       </nav>
       <Routes>
