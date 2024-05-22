@@ -12,7 +12,7 @@ interface CustomButtonProps {
 
 }
 
-const Button01: React.FC<CustomButtonProps> = ({  text, onClick, className,  }) => {
+const Button01 = ({  text, onClick, className,  }:CustomButtonProps) => {
   return (
     <Button onClick={onClick} size='sm' className={className} >
       {text}

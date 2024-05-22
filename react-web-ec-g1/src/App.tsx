@@ -1,5 +1,6 @@
 import { useState } from "react";
-import React from "react";
+
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import { Routes, Route, Link } from "react-router-dom";
 import { Cart } from "./pages/Cart";
@@ -7,15 +8,11 @@ import { TesteHome } from "./pages/Home";
 import { TesteLogin } from "./pages/Login";
 import { TestePerfil } from "./pages/Perfil";
 import { TesteProduto } from "./pages/Produto";
-import "bootstrap/dist/css/bootstrap.min.css";
 import Button01 from "./components/Button01";
-import './components/components.css'
+import "./components/components.css";
+import Form01 from "./components/Form01";
 
 function App() {
- 
-
-
-
   return (
     <>
       {/* o menu de navegação está fixo, procurando um jeito melhor de fazer */}
@@ -37,8 +34,6 @@ function App() {
           <li>
             <Link to="/cart">Carrinho</Link>
           </li>
-          
-         
         </ul>
       </nav>
       <Routes>

@@ -2,6 +2,8 @@
     background-color: #fb8500;
     border-color: #fb8500;
     color: "#1D3557" ;
+    transition: color .55s ease-in-out,background-color .55s ease-in-out,border-color .55s ease-in-out,box-shadow .55s ease-in-out;
+    
   }
 
   .btn-laranja:hover{

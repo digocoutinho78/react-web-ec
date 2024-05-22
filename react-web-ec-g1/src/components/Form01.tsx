@@ -6,7 +6,7 @@ interface CustomFormProps {
   onSubmit: () => void; // vazio para colocar a funcao desejada
 }
 
-const Form01: React.FC<CustomFormProps> = ({ onSubmit }) => {
+const Form01 = ({ onSubmit }:CustomFormProps) => {
   return (
     <Form onSubmit={onSubmit}>
       <Form.Group controlId="formBasicEmail">
