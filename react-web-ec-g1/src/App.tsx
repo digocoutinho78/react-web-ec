@@ -3,7 +3,7 @@ import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import { Routes, Route, Link } from "react-router-dom";
-import { Cart } from "./pages/Cart";
+import { Cart } from "./Cart/Cart";
 import { TesteHome } from "./pages/Home";
 import { TesteLogin } from "./pages/Login";
 import { TestePerfil } from "./pages/Perfil";
@@ -11,31 +11,28 @@ import { TesteProduto } from "./pages/Produto";
 import Button01 from "./components/Button01";
 import "./components/components.css";
 import Form01 from "./components/Form01";
+import { Container, Nav, NavDropdown, Navbar } from "react-bootstrap";
 
 function App() {
   return (
-    <>
+    <Container fluid>
       {/* o menu de navegação está fixo, procurando um jeito melhor de fazer */}
-      <nav>
-        <p>Navegação</p>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/login">Login</Link>
-          </li>
-          <li>
-            <Link to="/profile">Perfil</Link>
-          </li>
-          <li>
-            <Link to="/produto">Produto</Link>
-          </li>
-          <li>
-            <Link to="/cart">Carrinho</Link>
-          </li>
-        </ul>
-      </nav>
+      <Navbar fixed="top" expand="lg" className="bg-body-tertiary">
+      <Container>
+        <Navbar.Brand href="/">Eletro It</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="/login">Login </Nav.Link>
+            <Nav.Link href="/profile">Profile </Nav.Link>
+            <Nav.Link href="/produto">Produto </Nav.Link>
+            <Nav.Link href="/cart">Carrinho </Nav.Link>
+            
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
       <Routes>
         <Route path="/" element={<TesteHome />} />
         <Route path="/login" element={<TesteLogin />} />
@@ -45,7 +42,7 @@ function App() {
         {/* Pagina de 404 personalizada */}
         {/* <Route path="*" element={<Error />}  />  */}
       </Routes>
-    </>
+    </Container>
   );
 }
 
