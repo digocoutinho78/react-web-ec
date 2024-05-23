@@ -56,9 +56,6 @@ const Cart = () => {
                   </Col>
 
                 </Row>
-                <button onClick={() => cartCtx?.removeFromCart(item.product, 1)}>
-                  Remover do Carrinho
-                </button>
 
               </ListGroup.Item>))}
           </ListGroup>
