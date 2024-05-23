@@ -1,3 +1,13 @@
+/*********************** Inicio CONTEINER */
+.conteiner{
+  margin-top: 250px;
+  /* margem para inserir banner */
+}
+
+
+/********************************  Fim CONTEINER */
+
+
 /********************************  Inicio Botao */
 
 .btn-laranja {
@@ -19,8 +29,7 @@
 /*********************** Inicio CARD PRODUTO */
 
 .card-produto {
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin: 10px;
   /* background-color: #f1faee; */
   width: 16rem;
 }
