@@ -15,10 +15,11 @@ Axios
 npm install axios
 
 react-router-dom
-npm instal react-router-dom
+npm install react-router-dom
 
 bootstap e react bootstrap
-pm install react-bootstrap bootstrap
+npm install react-bootstrap bootstrap react-router-dom axios
+
 
 
 

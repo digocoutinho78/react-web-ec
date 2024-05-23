@@ -19,7 +19,7 @@ function App() {
       {/* o menu de navegação está fixo, procurando um jeito melhor de fazer */}
       <Navbar fixed="top" expand="lg" className="bg-body-tertiary">
       <Container>
-        <Navbar.Brand href="/">Eletro It</Navbar.Brand>
+        <Navbar.Brand  href="/">Eletro It</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
