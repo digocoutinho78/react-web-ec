@@ -1,35 +1,49 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+import { Routes, Route, Link } from "react-router-dom";
+import { Cart } from "./Cart/Cart";
+import { TesteHome } from "./pages/Home";
+import { TesteLogin } from "./pages/Login";
+import { TestePerfil } from "./pages/Perfil";
+import { TesteProduto } from "./pages/Produto";
+import Button01 from "./components/Button01";
+import "./components/components.css";
+import Form01 from "./components/Form01";
+import { Container, Nav, NavDropdown, Navbar } from "react-bootstrap";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <Container fluid>
+      {/* o menu de navegação está fixo, procurando um jeito melhor de fazer */}
+      <Navbar fixed="top" expand="lg" className="bg-body-tertiary">
+      <Container>
+        <Navbar.Brand  href="/">Eletro It</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="/login">Login </Nav.Link>
+            <Nav.Link href="/profile">Profile </Nav.Link>
+            <Nav.Link href="/produto">Produto </Nav.Link>
+            <Nav.Link href="/cart">Carrinho </Nav.Link>
+            
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+      <Routes>
+        <Route path="/" element={<TesteHome />} />
+        <Route path="/login" element={<TesteLogin />} />
+        <Route path="/profile" element={<TestePerfil />} />
+        <Route path="/produto" element={<TesteProduto />} />
+        <Route path="/cart" element={<Cart />} />
+        {/* Pagina de 404 personalizada */}
+        {/* <Route path="*" element={<Error />}  />  */}
+      </Routes>
+    </Container>
+  );
 }
 
-export default App
+export default App;

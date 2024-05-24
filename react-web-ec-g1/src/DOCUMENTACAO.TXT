@@ -13,7 +13,11 @@ Axios
 npm install axios
 
 react-router-dom
-npm instal react-router-dom
+npm install react-router-dom
+
+bootstap e react bootstrap
+npm install react-bootstrap bootstrap react-router-dom axios
+
 
 
 
@@ -31,5 +35,6 @@ Home - com listagem geral dos produtos.
 Perfil - dados do usuário
 Login - entrada de login, sendo acionada no carrinho de compras ou em botão fixo de login
 Produto - Visão detalhada do produto, com foto.
+Cart - carrinho
 
 Banco de dados: Firebase?

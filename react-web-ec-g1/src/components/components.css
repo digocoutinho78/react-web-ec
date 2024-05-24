@@ -1,0 +1,50 @@
+/*********************** Inicio CONTEINER */
+.conteiner{
+  margin-top: 250px;
+  /* margem para inserir banner */
+}
+
+
+/********************************  Fim CONTEINER */
+
+
+/********************************  Inicio Botao */
+
+.btn-laranja {
+  background-color: #fb8500;
+  border-color: #fb8500;
+  color: "#1D3557";
+  transition: color 0.55s ease-in-out, background-color 0.55s ease-in-out,
+    border-color 0.55s ease-in-out, box-shadow 0.55s ease-in-out;
+}
+
+.btn-laranja:hover {
+  background-color: #1d3557;
+  border-color: #fb8500;
+  color: #f1faee;
+}
+
+/********************************  Fim botão */
+
+/*********************** Inicio CARD PRODUTO */
+
+.card-produto {
+  margin: 10px;
+  /* background-color: #f1faee; */
+  width: 16rem;
+}
+
+.card-produto-titulo {
+  color: #1d3557;
+  font-size: 1em;
+}
+
+.image-card {
+  transition: transform 0.2s; /* Animação imagem */
+}
+
+.image-card:hover {
+  transform: scale(1.1);
+}
+
+/*************************** Fim CARD PRODUTO */
