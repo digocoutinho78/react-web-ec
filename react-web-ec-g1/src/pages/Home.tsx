@@ -10,6 +10,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { Ismartphones } from "../Types/Products";
 import "./Home.css";
+import Footer from "../components/Footer";
 // import InputHome from "../components/input";
 
 export function TesteHome() {
@@ -86,9 +87,9 @@ export function TesteHome() {
             aria-describedby="basic-addon2"
             onChange={filterProducts}
           />
-          {/* <Button variant="outline-secondary" id="button-addon2">
+          <Button variant="outline-secondary" id="button-addon2">
             Buscar
-          </Button> */}
+          </Button>
         </InputGroup>
       </Row>
 
@@ -102,6 +103,12 @@ export function TesteHome() {
       {condicao()}
       {/* final página de produtos */}
 
+<Row>
+<Footer/>
+</Row>
+
     </Container>
+
+
   );
 }
