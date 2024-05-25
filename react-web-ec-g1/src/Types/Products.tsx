@@ -5,3 +5,13 @@ interface Iproduct {
 }
 
 export default Iproduct
+
+
+export interface Ismartphones {
+    category: string,
+    description: string,
+    id: string,
+    price:number,
+    title: string,
+    images: string[]
+}
