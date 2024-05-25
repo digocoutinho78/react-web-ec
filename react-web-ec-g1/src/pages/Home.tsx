@@ -13,7 +13,7 @@ import "./Home.css";
 import Footer from "../components/Footer";
 import CarouselImage from "../components/CaroulseuImage";
 
-// import InputHome from "../components/input";
+
 
 export function TesteHome() {
   const [phones, setPhones] = useState<Ismartphones[]>();
