@@ -13,7 +13,6 @@ import "./components/components.css";
 import Form01 from "./components/Form01";
 import { Badge, Button, Container, Image, Nav, NavDropdown, Navbar } from "react-bootstrap";
 import logo from './assets/img/logo-s.svg'
-import cart from './assets/img/cart4.svg'
 import { CartCtx } from "./Context/CartContext";
 import { FaCartShopping } from "react-icons/fa6";
 
