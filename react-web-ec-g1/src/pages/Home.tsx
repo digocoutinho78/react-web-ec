@@ -1,10 +1,19 @@
 import React from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import ProductCard from "../components/CardProduto";
+import './Home.css'
+
 
 export function TesteHome() {
   return (
     <Container className="conteiner">
+      <Row>
+        <Col className="coluna-prop">
+        coluna da propaganda
+        </Col>
+        
+        
+      </Row>
       <Row>
         <ProductCard
           imagem="https://m.media-amazon.com/images/I/41Q2NXnJALL.__AC_SX300_SY300_QL70_ML2_.jpg"

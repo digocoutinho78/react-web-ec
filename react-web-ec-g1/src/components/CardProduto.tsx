@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, Button } from "react-bootstrap";
-import './components.css'
+import "./components.css";
 import Button01 from "./Button01";
 
 interface ProductCardProps {
@@ -22,18 +22,17 @@ const ProductCard = ({
 }: ProductCardProps) => {
   return (
     <Card className={className}>
-      <Card.Img  className="image-card"  src={imagem} />
+      <Card.Img className="image-card" src={imagem} />
       <Card.Body className="bg-gradient">
         <Card.Title className="card-produto-titulo">{nome}</Card.Title>
         <Card.Subtitle className="mb-2 text-muted ">{categoria}</Card.Subtitle>
         <Card.Text className="fw-light">{descricao}</Card.Text>
         <Card.Text className="fw-bold">{preco}</Card.Text>
-        <Button01 text="Adicionar ao carrinho" 
-        // onClick={} - chamar funcao
-        className="btn-laranja"
+        <Button01
+          text="Adicionar ao carrinho"
+          // onClick={} - chamar funcao
+          className="btn-laranja"
         />
-        
-        
       </Card.Body>
     </Card>
   );

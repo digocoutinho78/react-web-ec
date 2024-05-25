@@ -12,6 +12,7 @@ import Button01 from "./components/Button01";
 import "./components/components.css";
 import Form01 from "./components/Form01";
 import { Container, Nav, NavDropdown, Navbar } from "react-bootstrap";
+import logo from './assets/img/logo-s.svg'
 
 function App() {
   return (
@@ -19,14 +20,17 @@ function App() {
       {/* o menu de navegação está fixo, procurando um jeito melhor de fazer */}
       <Navbar fixed="top" expand="lg" className="bg-body-tertiary">
       <Container>
-        <Navbar.Brand  href="/">Eletro It</Navbar.Brand>
+        <Navbar.Brand href="#"></Navbar.Brand><img
+              src={logo}
+              width="120"
+              height="120"></img>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="/">Home</Nav.Link>
+            {/* <Nav.Link href="/">Home</Nav.Link> */}
             <Nav.Link href="/login">Login </Nav.Link>
-            <Nav.Link href="/profile">Profile </Nav.Link>
-            <Nav.Link href="/produto">Produto </Nav.Link>
+            <Nav.Link href="/profile">Meu Perfil </Nav.Link>
+            {/* <Nav.Link href="/produto">Produto </Nav.Link> */}
             <Nav.Link href="/cart">Carrinho </Nav.Link>
             
           </Nav>
