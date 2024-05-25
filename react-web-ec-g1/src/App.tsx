@@ -16,9 +16,9 @@ import logo from './assets/img/logo-s.svg'
 
 function App() {
   return (
-    <Container fluid>
+    <Container fluid >
       {/* o menu de navegação está fixo, procurando um jeito melhor de fazer */}
-      <Navbar fixed="top" expand="lg" className="bg-body-tertiary">
+      <Navbar fixed="top" expand="lg" className="bg-body-tertiary"  >
       <Container>
         <Navbar.Brand href="/"></Navbar.Brand><img
               src={logo}

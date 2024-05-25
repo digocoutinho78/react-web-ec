@@ -1,6 +1,7 @@
 .conteiner{
     flex: 1;
     width: 1800px;
+    margin-top: 120px;
 }
 
 .row-carrossel{
@@ -12,8 +13,7 @@
 
 .row-itens{
     margin-left: 15px;
-
-    
+ 
 }
 
 

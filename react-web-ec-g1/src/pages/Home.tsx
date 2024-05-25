@@ -8,7 +8,8 @@ import { GetSmartPhones } from "../services/crud";
 import { useEffect } from "react";
 import { useState } from "react";
 import { Ismartphones } from "../Types/Products";
-import "./Home.css"
+import "./Home.css";
+import InputHome from "../components/input";
 
 export function TesteHome() {
   const [phones, setPhones] = useState<Ismartphones[]>();
@@ -23,10 +24,12 @@ export function TesteHome() {
 
   return (
     <Container className="conteiner">
-      <Row className="row-carrossel">
-        teste
+      
+      <Row>
+        <InputHome />
       </Row>
-
+      <Row className="row-carrossel">teste</Row>
+      
       <Row>
         {phones?.map((item) => (
           <Col key={item.id} className="row-itens">
@@ -40,6 +43,7 @@ export function TesteHome() {
           </Col>
         ))}
       </Row>
+      
     </Container>
   );
 }
