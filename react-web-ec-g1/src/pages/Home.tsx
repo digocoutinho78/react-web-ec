@@ -11,6 +11,8 @@ import { useState } from "react";
 import { Ismartphones } from "../Types/Products";
 import "./Home.css";
 import Footer from "../components/Footer";
+import CarouselImage from "../components/CaroulseuImage";
+
 // import InputHome from "../components/input";
 
 export function TesteHome() {
@@ -96,7 +98,9 @@ export function TesteHome() {
       {/* Final barra de pesquisa */}
 
       {/* Inicio carrosel */}
-      <Row className="row-carrossel"></Row>
+      <Row className="row-carrossel">
+        <CarouselImage></CarouselImage>
+      </Row>
       {/* final carrosel */}
       
       {/* Inicio página de produtos */}

@@ -7,7 +7,7 @@ function CarouselImage() {
     <Carousel className='carousel-container'>
       <CarouselItem className='carousel-image'>
         <img
-          className="d-block w-100"
+          className="carrossel1"
           src="" //Local ou link imagem
           alt="propaganda"
         />
@@ -15,7 +15,7 @@ function CarouselImage() {
       </CarouselItem>
       <CarouselItem>
         <img
-          className="d-block w-100"
+          className="carrossel2"
           src="" //Local ou link imagem
           alt="propaganda"
         />
@@ -23,7 +23,7 @@ function CarouselImage() {
       </CarouselItem>
       <CarouselItem>
         <img
-          className="d-block w-100"
+          className="carrossel3"
           src="" //Local ou link imagem
           alt="propaganda"
         />
