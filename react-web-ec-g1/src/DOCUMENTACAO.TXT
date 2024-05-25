@@ -1,12 +1,10 @@
 
-
 Tabela de Cores 
 
 #1D3557 - texto
 #A8DADC - extra sobre fundo azul escuro
 #F1FAEE - extra sobre fundo vermelho ou  azul escuro
 #fb8500 - elementos, botoes, etc
-
 
 
 
