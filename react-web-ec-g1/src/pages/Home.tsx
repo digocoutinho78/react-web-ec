@@ -24,7 +24,7 @@ export function TesteHome() {
   return (
     <Container className="conteiner">
       <Row className="row-carrossel">
-        teste
+        
       </Row>
 
       <Row>
