@@ -8,6 +8,7 @@ import { GetSmartPhones } from "../services/crud";
 import { useEffect } from "react";
 import { useState } from "react";
 import { Ismartphones } from "../Types/Products";
+import "./Home.css"
 
 export function TesteHome() {
   const [phones, setPhones] = useState<Ismartphones[]>();
@@ -22,7 +23,9 @@ export function TesteHome() {
 
   return (
     <Container className="conteiner">
-      <Row className="row-carrossel"></Row>
+      <Row className="row-carrossel">
+        teste
+      </Row>
 
       <Row>
         {phones?.map((item) => (
