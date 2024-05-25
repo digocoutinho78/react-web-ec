@@ -7,7 +7,6 @@ import { Button, ButtonGroup, Col, Container, ListGroup, Row } from "react-boots
 
 
 const products: Iproduct[] = [
-  { id: 1, title: "Televisão", price: 10.99 },
   { id: 2, title: "Celular", price: 20.90 }
 ]
 
@@ -16,11 +15,14 @@ const Cart = () => {
   return (
 
     <Container fluid>
+
+
       <Row>
         <Col>
           <h2>Carrinho de Compras ({cartCtx?.totalAmount()})</h2>
         </Col>
       </Row>
+
       <Row>
         <Col>
           <Row>
@@ -48,17 +50,21 @@ const Cart = () => {
                     </Row>
                     <Row>
                       <Button variant="link" onClick={() => cartCtx.removeFromCart(item.product, item.quantity)}>remover</Button>
-
                     </Row>
                   </Col>
                   <Col>
-                    {item.quantity * item.product.price}
+                    {(item.quantity * item.product.price).toFixed(2)}
                   </Col>
-
                 </Row>
 
               </ListGroup.Item>))}
           </ListGroup>
+        </Col>
+      </Row>
+
+      <Row>
+        <Col>
+          <Button > COMPRAR </Button>
         </Col>
       </Row>
 

@@ -14,7 +14,7 @@ type ContextType = CartState & {
     addToCart: (product: Iproduct, quantity: number) => void
     removeFromCart: (product: Iproduct, quantity: number) => void
     cleanCart: () => void
-    totalAmount: () => number
+    totalAmount: () => string
     totalItems: () => number
 
 }
@@ -83,9 +83,12 @@ const CartCtxProvider = ({ children }: CartContextProviderProps) => {
         setCartState({ products: [] });
     }
 
-     const totalAmount = (): number => cartState.products.reduce((total, current) => {
-        return total + current.product.price * current.quantity;
-      }, 0);
+     const totalAmount = (): string => {
+        let a = cartState.products.reduce((total, current) => {
+        return total + current.product.price * current.quantity
+    }, 0);
+    return a.toFixed(2)
+}
 
       const totalItems = (): number => cartState.products.reduce((total, current) => {
         return total + current.quantity;
