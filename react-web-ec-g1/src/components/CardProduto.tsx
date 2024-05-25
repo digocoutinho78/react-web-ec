@@ -8,8 +8,8 @@ interface ProductCardProps {
   imagem: string;
   nome: string;
   categoria: string;
-  descricao: string;
-  preco: string;
+  // descricao: string;
+  preco: number;
 }
 
 const ProductCard = ({
@@ -17,7 +17,7 @@ const ProductCard = ({
   imagem,
   nome,
   categoria,
-  descricao,
+  // descricao, //DESCRICAO ENTRA NA PAGINA DO PRODUTO
   preco,
 }: ProductCardProps) => {
   return (
@@ -26,7 +26,7 @@ const ProductCard = ({
       <Card.Body className="bg-gradient">
         <Card.Title className="card-produto-titulo">{nome}</Card.Title>
         <Card.Subtitle className="mb-2 text-muted ">{categoria}</Card.Subtitle>
-        <Card.Text className="fw-light">{descricao}</Card.Text>
+        {/* <Card.Text className="fw-light">{descricao}</Card.Text> */}
         <Card.Text className="fw-bold">{preco}</Card.Text>
         <Button01
           text="Adicionar ao carrinho"

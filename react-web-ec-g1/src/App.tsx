@@ -20,7 +20,7 @@ function App() {
       {/* o menu de navegação está fixo, procurando um jeito melhor de fazer */}
       <Navbar fixed="top" expand="lg" className="bg-body-tertiary">
       <Container>
-        <Navbar.Brand href="#"></Navbar.Brand><img
+        <Navbar.Brand href="/"></Navbar.Brand><img
               src={logo}
               width="120"
               height="120"></img>
