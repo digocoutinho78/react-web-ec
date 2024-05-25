@@ -18,16 +18,11 @@ function App() {
   return (
     <Container fluid >
       {/* o menu de navegação está fixo, procurando um jeito melhor de fazer */}
-<<<<<<< HEAD
       <Navbar fixed="top" expand="lg" className="bg-body-tertiary"  >
-=======
-      <Navbar fixed="top" expand="lg" className="bg-body-tertiary ">
->>>>>>> cacf9f8ec19b237296b3f99d22e28521c85fd112
       <Container>
-        <Navbar.Brand href="/"></Navbar.Brand><img
-              src={logo}
-              width="120"
-              height="120"></img>
+        <Navbar.Brand href="/">
+          <img src={logo}  width="120"  height="120" ></img>
+          </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">

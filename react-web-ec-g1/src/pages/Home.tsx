@@ -24,12 +24,11 @@ export function TesteHome() {
 
   return (
     <Container className="conteiner">
-      
       <Row>
         <InputHome />
       </Row>
-      <Row className="row-carrossel">teste</Row>
-      
+      <Row className="row-carrossel"></Row>
+
       <Row>
         {phones?.map((item) => (
           <Col key={item.id} className="row-itens">
@@ -43,7 +42,6 @@ export function TesteHome() {
           </Col>
         ))}
       </Row>
-      
     </Container>
   );
 }
