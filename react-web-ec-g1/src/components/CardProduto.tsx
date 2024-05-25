@@ -7,7 +7,7 @@ interface ProductCardProps {
   className?: string;
   imagem: string;
   nome: string;
-  categoria: string;
+  // categoria: string;
   // descricao: string;
   preco: number;
 }
@@ -16,7 +16,7 @@ const ProductCard = ({
   className = "card-produto",
   imagem,
   nome,
-  categoria,
+  // categoria,
   // descricao, //DESCRICAO ENTRA NA PAGINA DO PRODUTO
   preco,
 }: ProductCardProps) => {
@@ -25,7 +25,7 @@ const ProductCard = ({
       <Card.Img className="image-card" src={imagem} />
       <Card.Body className="bg-gradient">
         <Card.Title className="card-produto-titulo">{nome}</Card.Title>
-        <Card.Subtitle className="mb-2 text-muted ">{categoria}</Card.Subtitle>
+        {/* <Card.Subtitle className="mb-2 text-muted ">{categoria}</Card.Subtitle> */}
         {/* <Card.Text className="fw-light">{descricao}</Card.Text> */}
         <Card.Text className="fw-bold">{preco}</Card.Text>
         <Button01

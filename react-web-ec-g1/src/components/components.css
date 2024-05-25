@@ -1,13 +1,11 @@
 /*********************** Inicio CONTEINER */
-.conteiner{
+.conteiner {
   /* margin-top: 250px; */
   /* margem para inserir banner */
-  
+  align-items: center;
 }
 
-
 /********************************  Fim CONTEINER */
-
 
 /********************************  Inicio Botao */
 
@@ -33,6 +31,9 @@
   margin: 10px;
   /* background-color: #f1faee; */
   width: 16rem;
+  height: 400px;
+  align-items: center;
+  margin-top: 20px;
 }
 
 .card-produto-titulo {
@@ -42,6 +43,14 @@
 
 .image-card {
   transition: transform 0.2s; /* Animação imagem */
+
+  max-height: 200px;
+  min-width: auto;
+  height: auto;
+
+  image-rendering: optimizeSpeed;
+  max-width: 100%;
+  object-fit: contain;
 }
 
 .image-card:hover {

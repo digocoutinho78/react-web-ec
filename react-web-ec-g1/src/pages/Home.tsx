@@ -22,19 +22,20 @@ export function TesteHome() {
 
   return (
     <Container className="conteiner">
-      <Row>
+      <Row className="row-carrossel"></Row>
 
-      {phones?.map((item) => (
-        <Col key={item.id} className="row-itens">
-          <ProductCard
-            imagem={item.images[0]}
-            nome={item.title}
-            categoria={item.category}
-            // descricao={item.description}
-            preco={item.price}
+      <Row>
+        {phones?.map((item) => (
+          <Col key={item.id} className="row-itens">
+            <ProductCard
+              imagem={item.images[0]}
+              nome={item.title}
+              // categoria={item.category}
+              // descricao={item.description}
+              preco={item.price}
             />
-        </Col>
-      ))}
+          </Col>
+        ))}
       </Row>
     </Container>
   );

@@ -3,9 +3,9 @@
     width: 1800px;
 }
 
-.coluna-prop{
+.row-carrossel{
 
-    height: 350px;
+    height: 450px;
     background-color: aquamarine;
 
 }   
@@ -14,3 +14,5 @@
 
     
 }
+
+
