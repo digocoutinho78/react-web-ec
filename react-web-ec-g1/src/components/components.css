@@ -3,7 +3,6 @@
   /* margin-top: 250px; */
   /* margem para inserir banner */
   align-items: center;
-
 }
 
 /********************************  Fim CONTEINER */
@@ -61,22 +60,16 @@
 
 /*************************** Fim CARD PRODUTO */
 
-
 /*************************** Inicio CarouselImagem */
 
-
 .carousel-container {
-  width: 400px;  /* Largura do carrossel */
-  height: 400px; /* Altura do carrossel */
-  margin: 0 auto; /* Centralizar o carrossel na página */
-}
-
-.carousel-container .carousel-image img {
   width: auto;
-  height: auto;
-  object-fit: cover; /* Ajusta a imagem para cobrir toda a área do carrossel */
+  object-fit: cover;
+  margin: 0 auto;
+}
+.carousel-image {
+  margin-left: -110px;
+  width: 1250px;
 }
 
 /************************** Fim CarouselImagem*/
-
-

@@ -1,30 +1,33 @@
 
 import { Carousel, CarouselItem } from 'react-bootstrap';
 import './components.css'
+import img1 from '../assets/img/carosel1.png'
+import img2 from '../assets/img/carosel2.png'
+import img3 from '../assets/img/carosel3.png'
 
 function CarouselImage() {
   return (
     <Carousel className='carousel-container'>
       <CarouselItem className='carousel-image'>
         <img
-          className="carrossel1"
-          src="" //Local ou link imagem
+          
+          src= {img1} //Local ou link imagem
           alt="propaganda"
         />
         
       </CarouselItem>
-      <CarouselItem>
+      <CarouselItem className='carousel-image'>
         <img
-          className="carrossel2"
-          src="" //Local ou link imagem
+          
+          src= {img2}//Local ou link imagem
           alt="propaganda"
         />
         
       </CarouselItem>
-      <CarouselItem>
+      <CarouselItem className='carousel-image'>
         <img
-          className="carrossel3"
-          src="" //Local ou link imagem
+          
+          src={img3} //Local ou link imagem
           alt="propaganda"
         />
 
