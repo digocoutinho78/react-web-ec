@@ -3,6 +3,8 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
 
+
+
 interface CustomButtonProps {
 
   text: string; // texto que irá aparecer no botao
@@ -14,6 +16,7 @@ interface CustomButtonProps {
 
 const Button01 = ({  text, onClick, className,  }:CustomButtonProps) => {
   return (
+    
     <Button onClick={onClick} size='sm' className={className} >
       {text}
     </Button>

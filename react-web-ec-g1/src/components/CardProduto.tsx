@@ -2,7 +2,9 @@ import React from "react";
 import { Card, Button } from "react-bootstrap";
 import "./components.css";
 import Button01 from "./Button01";
-import { CartCtx } from "../Context/CartContext"
+import { CartCtx } from "../Context/CartContext";
+import { BsCart4 } from "react-icons/bs";
+import { CardText } from "react-bootstrap-icons";
 
 interface ProductCardProps {
   className?: string;
@@ -29,10 +31,11 @@ const ProductCard = ({
         {/* <Card.Subtitle className="mb-2 text-muted ">{categoria}</Card.Subtitle> */}
         {/* <Card.Text className="fw-light">{descricao}</Card.Text> */}
         <Card.Text className="fw-bold">{preco}</Card.Text>
+
         <Button01
           text="Comprar"
           // onClick={} - chamar funcao
-          className="btn-laranja"
+          className="btn-laranja "
         />
       </Card.Body>
     </Card>
