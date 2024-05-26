@@ -76,6 +76,13 @@
 
 /*************************** Inicio FOOTER */
 
+.line{
+  border: 1px gray solid;
+  opacity: 30%;
+  margin-top: 20px;
+  
+}
+
 .footer {
   flex: 1;
   height: 80px;
@@ -106,6 +113,13 @@
 
 .iconFooter {
   margin-right: 15px;
+}
+
+.copyrgt{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #1d3557;
+  font-size: 0.7rem;
+  margin-top: 20px;
 }
 
 /*************************** Fim FOOTER */
