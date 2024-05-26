@@ -15,6 +15,8 @@ import { Badge, Button, Container, Image, Nav, NavDropdown, Navbar } from "react
 import logo from './assets/img/logo-s.svg'
 import { CartCtx } from "./Context/CartContext";
 import { FaCartShopping } from "react-icons/fa6";
+import Login from "./pages/signin/Login";
+import Cadastrar from "./pages/signup/Cadastro";
 
 function App() {
   const cartctx = useContext(CartCtx)
@@ -48,7 +50,8 @@ function App() {
       </Navbar>
       <Routes>
         <Route path="/" element={<TesteHome />} />
-        <Route path="/login" element={<TesteLogin />} />
+        <Route path="/login" element={<Login/>} />
+        <Route path="/cadastrar" element={<Cadastrar/>}/>
         <Route path="/profile" element={<TestePerfil />} />
         <Route path="/produto" element={<TesteProduto />} />
         <Route path="/cart" element={<Cart />} />
