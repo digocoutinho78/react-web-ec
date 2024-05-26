@@ -2,6 +2,7 @@ import React from "react";
 import { Card, Button } from "react-bootstrap";
 import "./components.css";
 import Button01 from "./Button01";
+import { CartCtx } from "../Context/CartContext"
 
 interface ProductCardProps {
   className?: string;

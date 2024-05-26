@@ -1,5 +1,10 @@
 
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import './components.css'
+import { BsTruck } from "react-icons/bs";
+import { BsCurrencyDollar } from "react-icons/bs";
+import { BsWhatsapp } from "react-icons/bs";
+
 
 
 
@@ -9,9 +14,10 @@ import { Container, Row, Col, Card, Button } from "react-bootstrap";
     return (
 
         <Row className="footer">
-    <Col></Col>
-    <Col xs={8}>Rodape</Col>
-    <Col></Col>
+    <Col  className="itemFooter"><BsTruck size={40} className="iconFooter"/>A entrega mais rápida do país</Col>
+    <Col  className="itemFooter"><BsCurrencyDollar size={40} className="iconFooter"/>Sempre os melhores preços</Col>
+    <Col  className="itemFooter"><BsWhatsapp size={40} className="iconFooter"/>
+Alguma dúvida? Fale conosco!</Col>
 </Row>
 
 )

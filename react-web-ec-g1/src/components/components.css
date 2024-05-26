@@ -73,3 +73,39 @@
 }
 
 /************************** Fim CarouselImagem*/
+
+/*************************** Inicio FOOTER */
+
+.footer {
+  flex: 1;
+  height: 80px;
+  width: 800px;
+  align-items: center;
+  color: #1d3557;
+  border-radius: 15px;
+  margin-top: 30px;
+}
+
+.itemFooter {
+  align-content: center;
+  flex: 1;
+  width: 100%;
+  border: 1px solid #f1faee;
+  border-radius: 15px;
+  margin: 0, 5px, 0, 5px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-color: #f1faee;
+  height: 80px;
+  text-align: center;
+  box-shadow: rgba(144, 144, 172, 0.25) 0px 6px 12px -2px,
+    rgba(93, 12, 12, 0.3) 0px 3px 7px -3px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 0.9rem;
+}
+
+.iconFooter {
+  margin-right: 15px;
+}
+
+/*************************** Fim FOOTER */

@@ -276,19 +276,19 @@ export const data = [
       "https://cdn.dummyjson.com/products/images/smartphones/Oppo%20A57/3.png",
     ],
   },
-  {
-    id: 126,
-    title: "Oppo F19 Pro+",
-    description:
-      "The Oppo F19 Pro+ is a feature-rich smartphone with a focus on camera capabilities. It boasts advanced photography features and a powerful performance for a premium user experience.",
-    category: "smartphones",
-    price: 399.99,
-    images: [
-      "https://cdn.dummyjson.com/products/images/smartphones/Oppo%20F19%20Pro+/1.png",
-      "https://cdn.dummyjson.com/products/images/smartphones/Oppo%20F19%20Pro+/2.png",
-      "https://cdn.dummyjson.com/products/images/smartphones/Oppo%20F19%20Pro+/3.png",
-    ],
-  },
+  // {
+  //   id: 126,
+  //   title: "Oppo F19 Pro+",
+  //   description:
+  //     "The Oppo F19 Pro+ is a feature-rich smartphone with a focus on camera capabilities. It boasts advanced photography features and a powerful performance for a premium user experience.",
+  //   category: "smartphones",
+  //   price: 3919.99,
+  //   images: [
+  //     "https://cdn.dummyjson.com/products/images/smartphones/Oppo%20F19%20Pro+/1.png",
+  //     "https://cdn.dummyjson.com/products/images/smartphones/Oppo%20F19%20Pro+/2.png",
+  //     "https://cdn.dummyjson.com/products/images/smartphones/Oppo%20F19%20Pro+/3.png",
+  //   ],
+  // },
   {
     id: 127,
     title: "Oppo K1",
@@ -483,18 +483,18 @@ export const data2 = [
       "https://cdn.dummyjson.com/products/images/smartphones/Oppo%20A57/3.png",
     ],
   },
-  {
-    title: "Oppo F19 Pro+",
-    description:
-      "The Oppo F19 Pro+ is a feature-rich smartphone with a focus on camera capabilities. It boasts advanced photography features and a powerful performance for a premium user experience.",
-    category: "smartphones",
-    price: 399.99,
-    images: [
-      "https://cdn.dummyjson.com/products/images/smartphones/Oppo%20F19%20Pro+/1.png",
-      "https://cdn.dummyjson.com/products/images/smartphones/Oppo%20F19%20Pro+/2.png",
-      "https://cdn.dummyjson.com/products/images/smartphones/Oppo%20F19%20Pro+/3.png",
-    ],
-  },
+  // {
+  //   title: "Oppo F19 Pro+",
+  //   description:
+  //     "The Oppo F19 Pro+ is a feature-rich smartphone with a focus on camera capabilities. It boasts advanced photography features and a powerful performance for a premium user experience.",
+  //   category: "smartphones",
+  //   price: 399.99,
+  //   images: [
+  //     "https://cdn.dummyjson.com/products/images/smartphones/Oppo%20F19%20Pro+/1.png",
+  //     "https://cdn.dummyjson.com/products/images/smartphones/Oppo%20F19%20Pro+/2.png",
+  //     "https://cdn.dummyjson.com/products/images/smartphones/Oppo%20F19%20Pro+/3.png",
+  //   ],
+  // },
   {
     title: "Oppo K1",
     description:
