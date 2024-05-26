@@ -1,10 +1,10 @@
 import React from "react";
-import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
 import ProductCard from "../components/CardProduto";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
-import { data2 } from "../services/data";
-import { testFunc } from "../services/crud";
+// import { data2 } from "../services/data";
+// import { testFunc } from "../services/crud";
 import { GetSmartPhones } from "../services/crud";
 import { useEffect } from "react";
 import { useState } from "react";
@@ -12,6 +12,8 @@ import { Ismartphones } from "../Types/Products";
 import "./Home.css";
 import Footer from "../components/Footer";
 import CarouselImage from "../components/CaroulseuImage";
+import CookieConsent from "react-cookie-consent";
+
 
 
 
@@ -44,6 +46,8 @@ export function TesteHome() {
   const condicao = () => {
     if (estado) {
       return (
+        
+          
         <Row>
           {phones?.map((item) => (
             <Col key={item.id} className="row-itens">
@@ -53,10 +57,11 @@ export function TesteHome() {
                 // categoria={item.category}
                 // descricao={item.description}
                 preco={item.price}
-              />
+                />
             </Col>
           ))}
         </Row>
+          
       );
     } else {
 
@@ -111,6 +116,31 @@ export function TesteHome() {
 <Row>
 <Footer/>
 </Row>
+
+<CookieConsent
+  location="bottom"
+  buttonText="Beleuza! (Aceito !)"
+  cookieName="myAwesomeCookieName2"
+  style={{ background: "#1D3557" }}
+  buttonStyle={{ color: "#4e503b", fontSize: "13px" }}
+  expires={150}
+>
+Valorizamos sua privacidade.
+
+Utilizamos cookies para aprimorar sua experiência de navegação, exibir anúncios ou conteúdo personalizado e analisar nosso tráfego. Ao clicar em “Aceitar”, você concorda com nosso uso de cookies.
+
+
+
+
+
+
+
+
+
+{" "}
+  {/* <span style={{ fontSize: "10px" }}>This bit of text is smaller :O</span> */}
+</CookieConsent>
+
 
     </Container>
 

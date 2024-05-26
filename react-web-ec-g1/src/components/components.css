@@ -1,20 +1,17 @@
-/*********************** Inicio CONTEINER */
-.conteiner {
-  /* margin-top: 250px; */
-  /* margem para inserir banner */
-  align-items: center;
-}
 
-/********************************  Fim CONTEINER */
 
 /********************************  Inicio Botao */
 
 .btn-laranja {
+  font-size: 0.8rem;
+  font-weight:400;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-color: #fb8500;
   border-color: #fb8500;
   color: "#1D3557";
-  transition: color 0.55s ease-in-out, background-color 0.55s ease-in-out,
-    border-color 0.55s ease-in-out, box-shadow 0.55s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out,
+    border-color 0.35s ease-in-out, box-shadow 0.35s ease-in-out;
 }
 
 .btn-laranja:hover {
@@ -28,14 +25,15 @@
 /*********************** Inicio CARD PRODUTO */
 
 .card-produto {
-  margin: 10px;
+  margin: 5px;
   /* background-color: #f1faee; */
-  width: 16rem;
+  width: 15rem;
   height: 350px;
   align-items: center;
   justify-content: end;
   margin-top: 20px;
   padding-top: 120px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .card-produto-titulo {

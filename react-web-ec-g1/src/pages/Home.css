@@ -1,6 +1,6 @@
 .conteiner{
     flex: 1;
-    width: 1800px;
+    width: 1500px;
     margin-top: 120px;
 }
 
@@ -12,16 +12,11 @@
 }   
 
 .row-itens{
-    margin-left: 15px;
+    margin-left: 5px;
     
 }
 
-/*************************** inicio FOOTER*/
 
-
-  
-  
-  /*************************** fim FOOTER*/
 
 
 /*************************** inicio PERFIL*/

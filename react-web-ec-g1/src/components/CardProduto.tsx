@@ -30,7 +30,7 @@ const ProductCard = ({
         {/* <Card.Text className="fw-light">{descricao}</Card.Text> */}
         <Card.Text className="fw-bold">{preco}</Card.Text>
         <Button01
-          text="Adicionar ao carrinho"
+          text="Comprar"
           // onClick={} - chamar funcao
           className="btn-laranja"
         />
