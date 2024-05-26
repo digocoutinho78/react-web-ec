@@ -116,7 +116,7 @@ export function TesteHome() {
 <Row>
 <Footer/>
 </Row>
-
+{/* ************************************************INICIO  COOKIES */}
 <CookieConsent
   location="bottom"
   buttonText="Beleuza! (Aceito !)"
@@ -128,19 +128,10 @@ export function TesteHome() {
 Valorizamos sua privacidade.
 
 Utilizamos cookies para aprimorar sua experiência de navegação, exibir anúncios ou conteúdo personalizado e analisar nosso tráfego. Ao clicar em “Aceitar”, você concorda com nosso uso de cookies.
-
-
-
-
-
-
-
-
-
 {" "}
   {/* <span style={{ fontSize: "10px" }}>This bit of text is smaller :O</span> */}
 </CookieConsent>
-
+{/* **************************************************FIM  COOKIES */}
 
     </Container>
 
