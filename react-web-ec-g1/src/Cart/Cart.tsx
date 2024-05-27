@@ -18,7 +18,7 @@ const Cart = () => {
     if (!authenticated) {
       navigate("/login");
     }
-    alert("comprando")
+    alert("FINALIZANDO COMPRA.....")
   };
   return (
 
@@ -62,14 +62,14 @@ const Cart = () => {
                     {(item.quantity * item.product.price).toFixed(2)}
                   </Col>
                 </Row>
-      <Row>
-        <Col>
-          <h2 className="tituloCar">Valor Total: R$ {cartCtx?.totalAmount()}</h2>
-        </Col>
-      </Row>
 
               </ListGroup.Item>))}
           </ListGroup>
+        <Row>
+          <Col>
+            <h2 className="tituloCar">Valor Total: R$ {cartCtx?.totalAmount()}</h2>
+          </Col>
+        </Row>
         </Col>
       </Row>
 
