@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useContext } from "react"; // Importe o useContext
 import { Card, Button } from "react-bootstrap";
 import "./components.css";
 import Button01 from "./Button01";
-import { CartCtx } from "../Context/CartContext";
+import { CartCtx } from "../Context/CartContext"; // Importe o CartCtx
 import { BsCart4 } from "react-icons/bs";
 import { CardText } from "react-bootstrap-icons";
 import { useNavigate } from "react-router-dom";
+import { Cart } from "../Cart/Cart";
 
 interface ProductCardProps {
   className?: string;
@@ -21,36 +22,35 @@ const ProductCard = ({
   imagem,
   nome,
   categoria,
-  descricao, //DESCRICAO ENTRA NA PAGINA DO PRODUTO
+  descricao,
   preco,
 }: ProductCardProps) => {
-  const navigate = useNavigate()
-  
-  
+  const navigate = useNavigate();
+  const cartCtx = useContext(CartCtx); //  useContext para acessar o CartCtx
+
+  const product = { 
+    id: 1, //confirmar valor
+    title: nome,
+    price: preco,
+    
+  };
+
   return (
     <Card className={className} >
       <Card.Img className="image-card" src={imagem} onClick={() => navigate( `descricao/${nome}/${categoria}/${descricao}/${preco}`) } />
       <Card.Body className="bg-gradient">
         <Card.Title className="card-produto-titulo">{nome}</Card.Title>
-        {/* <Card.Subtitle className="mb-2 text-muted ">{categoria}</Card.Subtitle> */}
-        {/* <Card.Text className="fw-light">{descricao}</Card.Text> */}
         <Card.Text className="fw-bold">{preco}</Card.Text>
 
         <Button01
           text="Comprar"
-          // onClick={} - chamar funcao
           className="btn-laranja "
-          onClick={() => alert("Jogar para o carinho")}
+          onClick={() => cartCtx?.addToCart(product, 1)} // Chame a função addToCart quando o botão for clicado
         />
+        
       </Card.Body>
     </Card>
   );
 };
 
 export default ProductCard;
-
-// modelo:
-
-{
-  /* <ProductCard imagem= 'https://m.media-amazon.com/images/I/41Q2NXnJALL.__AC_SX300_SY300_QL70_ML2_.jpg' nome='Smartfone Multilaser' categoria='Celulares' descricao='Smartphone Multilaser E Pro 4G 32GB Wi-Fi 5.0 pol. Dual Chip 1GB RAM Câmera 5MP + 5MP Android 11 (Go edition) Quad Core - Preto - P9150' preco='1000,00' /> */
-}
