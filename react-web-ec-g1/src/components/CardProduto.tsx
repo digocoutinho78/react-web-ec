@@ -1,10 +1,6 @@
-import React from "react";
-import { Card, Button } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import "./components.css";
 import Button01 from "./Button01";
-import { CartCtx } from "../Context/CartContext";
-import { BsCart4 } from "react-icons/bs";
-import { CardText } from "react-bootstrap-icons";
 import { useNavigate } from "react-router-dom";
 
 interface ProductCardProps {
@@ -24,21 +20,26 @@ const ProductCard = ({
   descricao, //DESCRICAO ENTRA NA PAGINA DO PRODUTO
   preco,
 }: ProductCardProps) => {
-  const navigate = useNavigate()
-  
-  
+  const navigate = useNavigate();
+  const encodeImage = encodeURIComponent(imagem);
+
   return (
-    <Card className={className} >
-      <Card.Img className="image-card" src={imagem} onClick={() => navigate( `descricao/${nome}/${categoria}/${descricao}/${preco}`) } />
+    <Card className={className}>
+      <Card.Img
+        className="image-card"
+        src={imagem}
+        onClick={() =>
+          navigate(
+            `descricao/${encodeImage}/${nome}/${categoria}/${descricao}/${preco}`
+          )
+        }
+      />
       <Card.Body className="bg-gradient">
         <Card.Title className="card-produto-titulo">{nome}</Card.Title>
-        {/* <Card.Subtitle className="mb-2 text-muted ">{categoria}</Card.Subtitle> */}
-        {/* <Card.Text className="fw-light">{descricao}</Card.Text> */}
         <Card.Text className="fw-bold">{preco}</Card.Text>
 
         <Button01
           text="Comprar"
-          // onClick={} - chamar funcao
           className="btn-laranja "
           onClick={() => alert("Jogar para o carinho")}
         />
