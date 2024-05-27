@@ -9,16 +9,16 @@ const Cadastrar = () => {
   const [password, setPassword] = useState<string>("");
   const [error, setError] = useState<string>("");
   const navigate = useNavigate();
-
-  const { registrar } = useContext<AuthContextType>(AuthContext);
-
   const cadastro = async () => {
+
+    const { registrar } = useContext<AuthContextType>(AuthContext);
+
     setError("null");
     try {
       const token = await registrar(email, password);
       navigate("/login");
-    } catch (err) {}
-  };
+    } catch (err) { }
+  }
 
   return (
     <div className="containerCadastro">

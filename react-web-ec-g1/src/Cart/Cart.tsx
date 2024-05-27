@@ -2,6 +2,11 @@ import { useContext } from "react"
 import Iproduct from "../Types/Products"
 import { CartCtx } from "../Context/CartContext"
 import { Button, ButtonGroup, Col, Container, ListGroup, Row } from "react-bootstrap";
+import { login } from "../Auth";
+import { AuthContext } from "../Context/AuthContext";
+import { useNavigate } from "react-router-dom";
+
+
 
 
 
@@ -12,6 +17,16 @@ const products: Iproduct[] = [
 
 const Cart = () => {
   const cartCtx = useContext(CartCtx)
+  const authtCtx = useContext(AuthContext)
+  const navigate = useNavigate();
+  const loader = async () => {
+    const authenticated = authtCtx.isAuthenticated
+    console.log(authenticated)
+    if (!authenticated) {
+      navigate("/login");
+    }
+    alert("comprando")
+  };
   return (
 
     <Container fluid>
@@ -64,7 +79,7 @@ const Cart = () => {
 
       <Row>
         <Col>
-          <Button > COMPRAR </Button>
+          <Button onClick={loader} > COMPRAR </Button>
         </Col>
       </Row>
 

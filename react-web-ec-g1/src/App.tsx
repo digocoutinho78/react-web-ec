@@ -17,48 +17,52 @@ import { CartCtx } from "./Context/CartContext";
 import { FaCartShopping } from "react-icons/fa6";
 import Login from "./pages/signin/Login";
 import Cadastrar from "./pages/signup/Cadastro";
+import { LoadingCtx } from "./Context/LoadingContext";
+import Loading from "./pages/Loading";
 
 function App() {
   const cartctx = useContext(CartCtx)
+  const loadingCtx = useContext(LoadingCtx)
   return (
-    <Container fluid >
-      {/* o menu de navegação está fixo, procurando um jeito melhor de fazer */}
-      <Navbar fixed="top" expand="lg" className="bg-body-tertiary"  >
-        <Container>
-          <Navbar.Brand href="/">
-            <img src={logo} width="120" height="120" ></img>
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ms-auto">
-              {/* <Nav.Link href="/">Home</Nav.Link> */}
-              <Nav.Link href="/login">Login </Nav.Link>
-              <Nav.Link href="/profile">Meu Perfil </Nav.Link>
-              {/* <Nav.Link href="/produto">Produto </Nav.Link> */}
-              <Nav.Link href="/cart">
-                <Button variant="light">
-                  <FaCartShopping size={25}/>
-                  <Badge bg="danger">
-                    {cartctx?.totalItems()}
-                  </Badge>
-                </Button>
-              </Nav.Link>
+      <Container fluid >
+        {/* o menu de navegação está fixo, procurando um jeito melhor de fazer */}
+        <Navbar fixed="top" expand="lg" className="bg-body-tertiary"  >
+          <Container>
+            <Navbar.Brand href="/">
+              <img src={logo} width="120" height="120" ></img>
+            </Navbar.Brand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+              <Nav className="ms-auto">
+                {/* <Nav.Link href="/">Home</Nav.Link> */}
+                <Nav.Link href="/login">Login </Nav.Link>
+                <Nav.Link href="/profile">Meu Perfil </Nav.Link>
+                {/* <Nav.Link href="/produto">Produto </Nav.Link> */}
+                <Nav.Link href="/cart">
+                  <Button variant="light">
+                    <FaCartShopping size={25} />
+                    <Badge bg="danger">
+                      {cartctx?.totalItems()}
+                    </Badge>
+                  </Button>
+                </Nav.Link>
 
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
-      <Routes>
-        <Route path="/" element={<TesteHome />} />
-        <Route path="/login" element={<Login/>} />
-        <Route path="/cadastrar" element={<Cadastrar/>}/>
-        <Route path="/profile" element={<TestePerfil />} />
-        <Route path="/produto" element={<TesteProduto />} />
-        <Route path="/cart" element={<Cart />} />
-        {/* Pagina de 404 personalizada */}
-        {/* <Route path="*" element={<Error />}  />  */}
-      </Routes>
-    </Container>
+              </Nav>
+            </Navbar.Collapse>
+          </Container>
+        </Navbar>
+        <Routes>
+          <Route path="/" element={<TesteHome />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/cadastrar" element={<Cadastrar />} />
+          <Route path="/profile" element={<TestePerfil />} />
+          <Route path="/produto" element={<TesteProduto />} />
+          <Route path="/cart" element={<Cart />} />
+          {/* Pagina de 404 personalizada */}
+          {/* <Route path="*" element={<Error />}  />  */}
+        </Routes>
+        <Loading show={loadingCtx?.isLoading} />
+      </Container>
   );
 }
 

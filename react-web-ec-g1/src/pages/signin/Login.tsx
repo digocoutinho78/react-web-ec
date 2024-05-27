@@ -14,6 +14,7 @@ const Login = () => {
 
   const submit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+
     setError("null");
 
     try {

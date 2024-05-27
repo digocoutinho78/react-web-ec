@@ -1,5 +1,6 @@
-import { createContext, useState } from "react"
+import { createContext, useContext, useState } from "react"
 import Iproduct from "../Types/Products"
+import { LoadingCtx } from "./LoadingContext"
 
 interface IshoppingCartItem {
     product: Iproduct
@@ -26,9 +27,10 @@ export const CartCtx = createContext<ContextType | undefined>(undefined);
 
 const CartCtxProvider = ({ children }: CartContextProviderProps) => {
     const [cartState, setCartState] = useState<CartState>({ products: [] })
-
+    const loadingctx = useContext(LoadingCtx)
 
     const addToCart = (product: Iproduct, quantity: number) => {
+        loadingctx?.setLoading(true)
         const alreadyInShoppingCart = cartState.products.find(
             (item) => item.product.id === product.id
         )
@@ -43,19 +45,24 @@ const CartCtxProvider = ({ children }: CartContextProviderProps) => {
                 return item;
             });
             setCartState({ products: newShoppingCart });
+            loadingctx?.setLoading(false)
+
             return;
+
         }
         const cartItem: IshoppingCartItem = {
             product,
             quantity,
         }
         const newShoppingCartItems: IshoppingCartItem[] = [...cartState.products, cartItem];
+        loadingctx?.setLoading(false)
         setCartState({ products: newShoppingCartItems })
     }
 
 
 
     const removeFromCart = (product: Iproduct, quantity: number) => {
+        loadingctx?.setLoading(true)
 
         const alreadyInShoppingCart = cartState.products.find(
             (item) => item.product.id === product.id
@@ -70,11 +77,15 @@ const CartCtxProvider = ({ children }: CartContextProviderProps) => {
                 return item
             });
             setCartState({ products: newShoppingCart })
+            loadingctx?.setLoading(false)
+
             return
         }
         const newShoppingCart: IshoppingCartItem[] = cartState.products.filter(
             (item) => item.product.id !== product.id
         )
+        loadingctx?.setLoading(false)
+
         setCartState({ products: newShoppingCart })
 
     }
@@ -83,24 +94,24 @@ const CartCtxProvider = ({ children }: CartContextProviderProps) => {
         setCartState({ products: [] });
     }
 
-     const totalAmount = (): string => {
+    const totalAmount = (): string => {
         let a = cartState.products.reduce((total, current) => {
-        return total + current.product.price * current.quantity
-    }, 0);
-    return a.toFixed(2)
-}
+            return total + current.product.price * current.quantity
+        }, 0);
+        return a.toFixed(2)
+    }
 
-      const totalItems = (): number => cartState.products.reduce((total, current) => {
+    const totalItems = (): number => cartState.products.reduce((total, current) => {
         return total + current.quantity;
-      }, 0);
+    }, 0);
 
 
 
-return (
-    <CartCtx.Provider value={{ ...cartState, addToCart, removeFromCart, cleanCart, totalAmount, totalItems }}>
-        {children}
-    </CartCtx.Provider>
-)
+    return (
+        <CartCtx.Provider value={{ ...cartState, addToCart, removeFromCart, cleanCart, totalAmount, totalItems }}>
+            {children}
+        </CartCtx.Provider>
+    )
 }
 
 export default CartCtxProvider

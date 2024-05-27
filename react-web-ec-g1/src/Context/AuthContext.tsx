@@ -1,5 +1,6 @@
-import { createContext, useState, ReactNode, FC } from "react";
+import { createContext, useState, ReactNode, FC, useContext } from "react";
 import { login, newUser } from "../Auth";
+import { LoadingCtx } from "./LoadingContext";
 
 export interface AuthContextType {
   token: string | null;
@@ -21,24 +22,32 @@ interface AuthContextProviderProps {
 
 const AuthContextProvider: FC<AuthContextProviderProps> = ({ children }) => {
   const [token, setToken] = useState<string | null>(null);
-
+  const loadingCtx = useContext(LoadingCtx)
   const entrar = async (email: string, password: string) => {
+
+    loadingCtx?.setLoading(true)
     const userToken = await login(email, password);
     if (userToken) {
       setToken(userToken);
     }else{
       alert("Erro ao acessar")
     }
+    loadingCtx?.setLoading(false)
+
     return userToken;
   };
 
   const registrar = async (email: string, password: string) => {
+    loadingCtx?.setLoading(true)
+
     const userToken = await newUser(email, password);
     if (userToken) {
       setToken(userToken);
     }else{
       alert("Erro na autenticação")
     }
+    loadingCtx?.setLoading(false)
+
     return userToken;
   };
 
