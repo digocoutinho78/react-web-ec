@@ -2,6 +2,7 @@ import { Card } from "react-bootstrap";
 import "./components.css";
 import Button01 from "./Button01";
 import { useNavigate } from "react-router-dom";
+import { Cart } from "../Cart/Cart";
 
 interface ProductCardProps {
   className?: string;
@@ -17,7 +18,7 @@ const ProductCard = ({
   imagem,
   nome,
   categoria,
-  descricao, //DESCRICAO ENTRA NA PAGINA DO PRODUTO
+  descricao,
   preco,
 }: ProductCardProps) => {
   const navigate = useNavigate();
@@ -41,17 +42,12 @@ const ProductCard = ({
         <Button01
           text="Comprar"
           className="btn-laranja "
-          onClick={() => alert("Jogar para o carinho")}
+          onClick={() => cartCtx?.addToCart(product, 1)} // Chame a função addToCart quando o botão for clicado
         />
+        
       </Card.Body>
     </Card>
   );
 };
 
 export default ProductCard;
-
-// modelo:
-
-{
-  /* <ProductCard imagem= 'https://m.media-amazon.com/images/I/41Q2NXnJALL.__AC_SX300_SY300_QL70_ML2_.jpg' nome='Smartfone Multilaser' categoria='Celulares' descricao='Smartphone Multilaser E Pro 4G 32GB Wi-Fi 5.0 pol. Dual Chip 1GB RAM Câmera 5MP + 5MP Android 11 (Go edition) Quad Core - Preto - P9150' preco='1000,00' /> */
-}
