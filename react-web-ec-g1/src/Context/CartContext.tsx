@@ -1,6 +1,7 @@
 import { createContext, useContext, useState, useEffect } from "react"
 import Iproduct from "../Types/Products"
 import { LoadingCtx } from "./LoadingContext"
+import {ToastCtx} from "./ToastContext"
 
 interface IshoppingCartItem {
     product: Iproduct
@@ -27,7 +28,7 @@ export const CartCtx = createContext<ContextType | undefined>(undefined);
 const CartCtxProvider = ({ children }: CartContextProviderProps) => {
     const [cartState, setCartState] = useState<CartState>({ products: [] })
     const loadingctx = useContext(LoadingCtx)
-
+    const toastCtx = useContext(ToastCtx)
     // Adicione este useEffect para recuperar o estado do carrinho do localStorage quando o componente é montado
     useEffect(() => {
         const savedCartState = localStorage.getItem('cart');
@@ -56,9 +57,10 @@ const CartCtxProvider = ({ children }: CartContextProviderProps) => {
                     });
                 return item;
             });
+            
             setCartState({ products: newShoppingCart });
             loadingctx?.setLoading(false)
-
+            toastCtx?.setToast(true);
             return;
 
         }
@@ -68,6 +70,7 @@ const CartCtxProvider = ({ children }: CartContextProviderProps) => {
         }
         const newShoppingCartItems: IshoppingCartItem[] = [...cartState.products, cartItem];
         loadingctx?.setLoading(false)
+        toastCtx?.setToast(true);
         setCartState({ products: newShoppingCartItems })
     }
 

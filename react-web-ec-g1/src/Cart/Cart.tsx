@@ -7,14 +7,6 @@ import { AuthContext } from "../Context/AuthContext";
 import { useNavigate } from "react-router-dom";
 
 
-
-
-
-
-const products: Iproduct[] = [
-  { id: 2, title: "Celular", price: 20.90 }
-]
-
 const Cart = () => {
   const cartCtx = useContext(CartCtx)
   const authtCtx = useContext(AuthContext)
@@ -82,19 +74,6 @@ const Cart = () => {
           <Button onClick={loader} > COMPRAR </Button>
         </Col>
       </Row>
-
-
-      <ul>
-        {products.map((product) => (
-          <li>
-            <p>{product.title}</p>
-            <p>{product.price}</p>
-            <button onClick={() => cartCtx?.addToCart(product, 1)}>
-              Adicionar no carrinho
-            </button>
-          </li>))}
-      </ul>
-
     </Container>
 
   )

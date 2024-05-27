@@ -6,14 +6,17 @@ import { BrowserRouter } from "react-router-dom";
 import CartCtxProvider from "./Context/CartContext.tsx";
 import LoadingCtxProvider, { LoadingCtx } from "./Context/LoadingContext.tsx";
 import AuthContextProvider from "./Context/AuthContext.tsx";
+import ToastCtxProvider from "./Context/ToastContext.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <BrowserRouter>
     <LoadingCtxProvider>
       <AuthContextProvider>
-        <CartCtxProvider>
-          <App />
-        </CartCtxProvider>
+        <ToastCtxProvider>
+          <CartCtxProvider>
+            <App />
+          </CartCtxProvider>
+        </ToastCtxProvider>
       </AuthContextProvider>
     </LoadingCtxProvider>
   </BrowserRouter>
