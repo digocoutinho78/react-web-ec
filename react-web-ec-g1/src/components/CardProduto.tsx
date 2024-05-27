@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useContext } from "react";
 import { Card, Button } from "react-bootstrap";
 import "./components.css";
@@ -6,11 +5,6 @@ import Button01 from "./Button01";
 import { CartCtx } from "../Context/CartContext";
 import { BsCart4 } from "react-icons/bs";
 import { CardText } from "react-bootstrap-icons";
-=======
-import { Card } from "react-bootstrap";
-import "./components.css";
-import Button01 from "./Button01";
->>>>>>> 2c83ac653c595c2364dc4f805fe7332625f7f96e
 import { useNavigate } from "react-router-dom";
 import { Cart } from "../Cart/Cart";
 
