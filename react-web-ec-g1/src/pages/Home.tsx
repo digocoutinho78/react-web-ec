@@ -46,6 +46,7 @@ export function TesteHome() {
           {phones?.map((item) => (
             <Col key={item.id} className="row-itens">
               <ProductCard
+              id={item.id}
                 imagem={item.images[0]}
                 nome={item.title}
                 categoria={item.category}
@@ -62,6 +63,7 @@ export function TesteHome() {
           {filtro?.map((item) => (
             <Col key={item.id} className="row-itens">
               <ProductCard
+              id={item.id}
                 imagem={item.images[0]}
                 nome={item.title}
                 categoria={item.category}
