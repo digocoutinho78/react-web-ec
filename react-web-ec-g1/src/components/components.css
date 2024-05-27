@@ -1,10 +1,8 @@
-
-
 /********************************  Inicio Botao */
 
 .btn-laranja {
   font-size: 0.8rem;
-  font-weight:400;
+  font-weight: 400;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-color: #fb8500;
   border-color: #fb8500;
@@ -20,6 +18,24 @@
   color: #f1faee;
 }
 
+.btn-laranja2 {
+  font-size: 0.8rem;
+  font-weight: 400;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #fb8500;
+  border-color: #fb8500;
+  color: "#1D3557";
+  margin-top: 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out,
+    border-color 0.35s ease-in-out, box-shadow 0.35s ease-in-out;
+}
+
+.btn-laranja2:hover {
+  background-color: #1d3557;
+  border-color: #fb8500;
+  color: #f1faee;
+}
 /********************************  Fim botão */
 
 /*********************** Inicio CARD PRODUTO */
@@ -74,11 +90,15 @@
 
 /*************************** Inicio FOOTER */
 
-.line{
+.line {
   border: 1px gray solid;
   opacity: 30%;
   margin-top: 20px;
-  
+}
+.line2 {
+  border: 1px gray solid;
+  opacity: 30%;
+  margin-top: 10px;
 }
 
 .footer {
@@ -113,7 +133,7 @@
   margin-right: 15px;
 }
 
-.copyrgt{
+.copyrgt {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: #1d3557;
   font-size: 0.7rem;
@@ -121,3 +141,65 @@
 }
 
 /*************************** Fim FOOTER */
+
+/*************************** Inicio DESCRICAO PRODUTO */
+
+.conteinerProd {
+  margin-top: 5px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+
+  width: 700px;
+}
+
+.ConteinerCardDesc {
+  margin-top: 130px;
+}
+
+.image-card2 {
+  transition: transform 0.2s; /* Animação imagem */
+
+  max-height: 450px;
+  min-width: auto;
+  height: auto;
+  image-rendering: optimizeSpeed;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.image-card2:hover {
+  transform: scale(1.2);
+}
+
+.cardTitulo {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  color: #1d3557;
+}
+
+.cardCat {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: gray;
+  font-size: 12px;
+}
+
+.cardDescr {
+  color: #1d3557;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 15px;
+  text-align: justify;
+  margin-top: 15px;
+}
+
+.cardPreco {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #fb8500;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: justify;
+  margin-top: 15px;
+}
+
+/************************** Fim DESCRICAO PRODUTO*/
