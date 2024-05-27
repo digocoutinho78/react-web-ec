@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 import { Cart } from "../Cart/Cart";
 
 interface ProductCardProps {
-  id: string; // Certifique-se de que a prop id está presente
+  id: string; 
   className?: string;
   imagem: string;
   nome: string;
@@ -20,7 +20,7 @@ interface ProductCardProps {
 }
 
 const ProductCard = ({
-  id, // Inclua o id aqui
+  id, 
   className = "card-produto",
   imagem,
   nome,
@@ -32,7 +32,7 @@ const ProductCard = ({
   const cartCtx = useContext(CartCtx);
 
   const product = {
-    id, // Inclua o id do produto aqui
+    id, 
     title: nome,
     price: preco,
   };
@@ -56,7 +56,7 @@ const ProductCard = ({
         <Button01
           text="Comprar"
           className="btn-laranja "
-          onClick={() => cartCtx?.addToCart(product, 1)} // Chame a função addToCart quando o botão for clicado
+          onClick={() => cartCtx?.addToCart(product, 1)} // addToCart quando o botão for clicado
         />
         
       </Card.Body>
