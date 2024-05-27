@@ -13,5 +13,7 @@ export interface Ismartphones {
     id: string,
     price:number,
     title: string,
-    images: string[]
+    images: string[],
+    onClick: () => void
+
 }

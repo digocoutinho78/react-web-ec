@@ -5,13 +5,14 @@ import Button01 from "./Button01";
 import { CartCtx } from "../Context/CartContext";
 import { BsCart4 } from "react-icons/bs";
 import { CardText } from "react-bootstrap-icons";
+import { useNavigate } from "react-router-dom";
 
 interface ProductCardProps {
   className?: string;
   imagem: string;
   nome: string;
-  // categoria: string;
-  // descricao: string;
+  categoria: string;
+  descricao: string;
   preco: number;
 }
 
@@ -19,13 +20,16 @@ const ProductCard = ({
   className = "card-produto",
   imagem,
   nome,
-  // categoria,
-  // descricao, //DESCRICAO ENTRA NA PAGINA DO PRODUTO
+  categoria,
+  descricao, //DESCRICAO ENTRA NA PAGINA DO PRODUTO
   preco,
 }: ProductCardProps) => {
+  const navigate = useNavigate()
+  
+  
   return (
-    <Card className={className}>
-      <Card.Img className="image-card" src={imagem} />
+    <Card className={className} >
+      <Card.Img className="image-card" src={imagem} onClick={() => navigate( `descricao/${nome}/${categoria}/${descricao}/${preco}`) } />
       <Card.Body className="bg-gradient">
         <Card.Title className="card-produto-titulo">{nome}</Card.Title>
         {/* <Card.Subtitle className="mb-2 text-muted ">{categoria}</Card.Subtitle> */}
@@ -36,6 +40,7 @@ const ProductCard = ({
           text="Comprar"
           // onClick={} - chamar funcao
           className="btn-laranja "
+          onClick={() => alert("Jogar para o carinho")}
         />
       </Card.Body>
     </Card>

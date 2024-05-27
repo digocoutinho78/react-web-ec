@@ -19,13 +19,14 @@ import Login from "./pages/signin/Login";
 import Cadastrar from "./pages/signup/Cadastro";
 import { LoadingCtx } from "./Context/LoadingContext";
 import Loading from "./pages/Loading";
+import { Descricao } from "./pages/descricao";
 
 function App() {
   const cartctx = useContext(CartCtx)
   const loadingCtx = useContext(LoadingCtx)
   return (
       <Container fluid >
-        {/* o menu de navegação está fixo, procurando um jeito melhor de fazer */}
+       
         <Navbar fixed="top" expand="lg" className="bg-body-tertiary"  >
           <Container>
             <Navbar.Brand href="/">
@@ -58,6 +59,7 @@ function App() {
           <Route path="/profile" element={<TestePerfil />} />
           <Route path="/produto" element={<TesteProduto />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/descricao/:nome/:categoria/:descricao/:preco" element={<Descricao/>} />
           {/* Pagina de 404 personalizada */}
           {/* <Route path="*" element={<Error />}  />  */}
         </Routes>
