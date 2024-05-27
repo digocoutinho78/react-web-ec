@@ -9,7 +9,6 @@ import { TesteLogin } from "./pages/Login";
 import { TestePerfil } from "./pages/Perfil";
 import { TesteProduto } from "./pages/Produto";
 import Button01 from "./components/Button01";
-import "./components/components.css";
 import Form01 from "./components/Form01";
 import { Badge, Button, Container, Image, Nav, NavDropdown, Navbar } from "react-bootstrap";
 import logo from './assets/img/logo-s.svg'
@@ -25,10 +24,9 @@ function App() {
   const cartctx = useContext(CartCtx)
   const loadingCtx = useContext(LoadingCtx)
   return (
-      <Container fluid >
-       
-        <Navbar fixed="top" expand="lg" className="bg-body-tertiary"  >
-          <Container>
+      <Container fluid className="conteiner3">
+        <Navbar fixed="top" expand="lg"  className="bg-body-tertiary" style={{ marginBottom: "120px" }}  >
+          <Container >
             <Navbar.Brand href="/">
               <img src={logo} width="120" height="120" ></img>
             </Navbar.Brand>
@@ -52,6 +50,7 @@ function App() {
             </Navbar.Collapse>
           </Container>
         </Navbar>
+       
         <Routes>
           <Route path="/" element={<TesteHome />} />
           <Route path="/login" element={<Login />} />
