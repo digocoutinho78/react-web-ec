@@ -1,14 +1,15 @@
-import React, { useContext } from "react"; // Importe o useContext
+import React, { useContext } from "react";
 import { Card, Button } from "react-bootstrap";
 import "./components.css";
 import Button01 from "./Button01";
-import { CartCtx } from "../Context/CartContext"; // Importe o CartCtx
+import { CartCtx } from "../Context/CartContext";
 import { BsCart4 } from "react-icons/bs";
 import { CardText } from "react-bootstrap-icons";
 import { useNavigate } from "react-router-dom";
 import { Cart } from "../Cart/Cart";
 
 interface ProductCardProps {
+  id: string; // Certifique-se de que a prop id está presente
   className?: string;
   imagem: string;
   nome: string;
@@ -18,6 +19,7 @@ interface ProductCardProps {
 }
 
 const ProductCard = ({
+  id, // Inclua o id aqui
   className = "card-produto",
   imagem,
   nome,
@@ -26,12 +28,12 @@ const ProductCard = ({
   preco,
 }: ProductCardProps) => {
   const navigate = useNavigate();
-  const cartCtx = useContext(CartCtx); // Use o useContext para acessar o CartCtx
+  const cartCtx = useContext(CartCtx);
 
-  const product = { // Crie um objeto de produto
+  const product = {
+    id, // Inclua o id do produto aqui
     title: nome,
     price: preco,
-    // Adicione quaisquer outras propriedades necessárias
   };
 
   return (

@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, useEffect } from "react" // Importe useEffect
+import { createContext, useContext, useState, useEffect } from "react"
 import Iproduct from "../Types/Products"
 import { LoadingCtx } from "./LoadingContext"
 
