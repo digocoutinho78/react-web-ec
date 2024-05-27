@@ -26,13 +26,12 @@ const ProductCard = ({
   preco,
 }: ProductCardProps) => {
   const navigate = useNavigate();
-  const cartCtx = useContext(CartCtx); //  useContext para acessar o CartCtx
+  const cartCtx = useContext(CartCtx); // Use o useContext para acessar o CartCtx
 
-  const product = { 
-    id: 1, //confirmar valor
+  const product = { // Crie um objeto de produto
     title: nome,
     price: preco,
-    
+    // Adicione quaisquer outras propriedades necessárias
   };
 
   return (
