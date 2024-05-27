@@ -59,7 +59,7 @@ function App() {
           <Route path="/profile" element={<TestePerfil />} />
           <Route path="/produto" element={<TesteProduto />} />
           <Route path="/cart" element={<Cart />} />
-          <Route path="/descricao/:nome/:categoria/:descricao/:preco" element={<Descricao/>} />
+          <Route path="/descricao/:imagem/:nome/:categoria/:descricao/:preco" element={<Descricao/>} />
           {/* Pagina de 404 personalizada */}
           {/* <Route path="*" element={<Error />}  />  */}
         </Routes>

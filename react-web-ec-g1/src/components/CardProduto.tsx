@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useContext } from "react";
 import { Card, Button } from "react-bootstrap";
 import "./components.css";
@@ -5,6 +6,11 @@ import Button01 from "./Button01";
 import { CartCtx } from "../Context/CartContext";
 import { BsCart4 } from "react-icons/bs";
 import { CardText } from "react-bootstrap-icons";
+=======
+import { Card } from "react-bootstrap";
+import "./components.css";
+import Button01 from "./Button01";
+>>>>>>> 2c83ac653c595c2364dc4f805fe7332625f7f96e
 import { useNavigate } from "react-router-dom";
 import { Cart } from "../Cart/Cart";
 
@@ -35,10 +41,19 @@ const ProductCard = ({
     title: nome,
     price: preco,
   };
+  const encodeImage = encodeURIComponent(imagem);
 
   return (
-    <Card className={className} >
-      <Card.Img className="image-card" src={imagem} onClick={() => navigate( `descricao/${nome}/${categoria}/${descricao}/${preco}`) } />
+    <Card className={className}>
+      <Card.Img
+        className="image-card"
+        src={imagem}
+        onClick={() =>
+          navigate(
+            `descricao/${encodeImage}/${nome}/${categoria}/${descricao}/${preco}`
+          )
+        }
+      />
       <Card.Body className="bg-gradient">
         <Card.Title className="card-produto-titulo">{nome}</Card.Title>
         <Card.Text className="fw-bold">{preco}</Card.Text>

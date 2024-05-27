@@ -19,13 +19,13 @@ export function TesteHome() {
   const [filtro, setFiltro] = useState<Ismartphones[]>();
   const [estado, setEstado] = useState(true);
 
-  console.log(estado);
+ 
 
   useEffect(() => {
     const response = async () => {
       const phonesTeste = await GetSmartPhones();
       setPhones(phonesTeste);
-      // console.log(phonesTeste);
+      
     };
     response();
   }, []);
