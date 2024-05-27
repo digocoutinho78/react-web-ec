@@ -5,7 +5,8 @@ import { Button, ButtonGroup, Col, Container, ListGroup, Row } from "react-boots
 import { login } from "../Auth";
 import { AuthContext } from "../Context/AuthContext";
 import { useNavigate } from "react-router-dom";
-
+import "../components/components.css";
+import Button01 from "../components/Button01";
 
 const Cart = () => {
   const cartCtx = useContext(CartCtx)
@@ -24,11 +25,6 @@ const Cart = () => {
     <Container fluid>
 
 
-      <Row>
-        <Col>
-          <h2>Carrinho de Compras ({cartCtx?.totalAmount()})</h2>
-        </Col>
-      </Row>
 
       <Row>
         <Col>
@@ -41,28 +37,36 @@ const Cart = () => {
           <ListGroup>
             {cartCtx?.products.map((item) => (
               <ListGroup.Item>
-                <Row>
-                  <Col>
+                <Row className="rowCart">
+                  <Col className="colunaCar">
                     {item.product.title}
                   </Col>
-                  <Col>
-                    <Row>
+                  <Col className="colunaCar">
+                    <Row className="rowCart">
                       <ButtonGroup aria-label="Quantidade">
-                        <Button onClick={() => cartCtx.removeFromCart(item.product, 1)}>-</Button>
-                        <Button variant="light" disabled={true} >{item.quantity}</Button>
-                        <Button onClick={() => cartCtx.addToCart(item.product, 1)}>+</Button>
+                        <Button className="bgBut" onClick={() => cartCtx.removeFromCart(item.product, 1)}>-</Button>
+                        <Button className="qtdCar" variant="light" disabled={true} >{item.quantity}</Button>
+                        <Button className="bgBut" onClick={() => cartCtx.addToCart(item.product, 1)}>+</Button>
 
 
                       </ButtonGroup>
                     </Row>
                     <Row>
-                      <Button variant="link" onClick={() => cartCtx.removeFromCart(item.product, item.quantity)}>remover</Button>
+                      <Button variant="link" onClick={() => cartCtx.removeFromCart(item.product, item.quantity)}><p className="removerBut">
+                        remover
+                          </p></Button>
                     </Row>
+                    
                   </Col>
-                  <Col>
+                  <Col className="valorCart">
                     {(item.quantity * item.product.price).toFixed(2)}
                   </Col>
                 </Row>
+      <Row>
+        <Col>
+          <h2 className="tituloCar">Valor Total: R$ {cartCtx?.totalAmount()}</h2>
+        </Col>
+      </Row>
 
               </ListGroup.Item>))}
           </ListGroup>
@@ -71,7 +75,7 @@ const Cart = () => {
 
       <Row>
         <Col>
-          <Button onClick={loader} > COMPRAR </Button>
+          <Button01 text="FINALIZAR COMPRA" onClick={loader} className="btn-laranja2"> COMPRAR </Button01>
         </Col>
       </Row>
     </Container>
