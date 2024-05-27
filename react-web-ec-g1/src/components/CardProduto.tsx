@@ -51,7 +51,7 @@ const ProductCard = ({
       />
       <Card.Body className="bg-gradient">
         <Card.Title className="card-produto-titulo">{nome}</Card.Title>
-        <Card.Text className="fw-bold">{preco}</Card.Text>
+        <Card.Text className="fw-bold">R$ {preco}</Card.Text>
 
         <Button01
           text="Comprar"
